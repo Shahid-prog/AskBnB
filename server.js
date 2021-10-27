@@ -6,7 +6,7 @@ const server = express();
 server.use(express.static(path.join(__dirname, '/client/build')));
 
 server.get('/', (req, res) => {
-  res.send('Hello AskBnB');
+  res.send('Hello AskBnB once again');
 });
 
 const PORT = process.env.PORT || 9000;
