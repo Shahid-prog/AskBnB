@@ -6,7 +6,7 @@ const server = express();
 server.use(express.static(path.join(__dirname, '/client/build')));
 
 server.get('/', (req, res) => {
-  res.send('Testing CI pipeline');
+  res.send('Testing CI pipeline again');
 });
 
 const PORT = process.env.PORT || 9000;
