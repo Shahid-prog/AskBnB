@@ -4,14 +4,17 @@ pipeline {
      stages {
        stage('Git') {
             steps {
-                sh "cd /nodeapp/"
-                sh "cd /AskBnB/"
                 git branch: 'main', url: 'https://github.com/Shahid-prog/AskBnB.git'
             }
           }
-        stage("Build") {
+       stage("Build") {
             steps {
                 sh "npm install"
+            }
+          }
+        stage("Deploy") {
+            steps {
+                sh "./scripts/deploy"
             }
           }
     }
