@@ -1,6 +1,6 @@
 #!/bin/sh
 cd
-cp -r /var/lib/jenkins/workspace/askbnb_test/* ~/nodeapp/AskBnB/
+cp -r /var/lib/jenkins/workspace/askbnb_test/* /home/teamgamma/nodeapp/AskBnB/
 cd nodeapp/AskBnB/
 npm install -g nodemon pm2
 pm2 restart ecosystem.config.js
