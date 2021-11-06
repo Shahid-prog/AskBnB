@@ -2,5 +2,5 @@
 cd
 cp -r /var/lib/jenkins/workspace/askbnb_test/* /home/teamgamma/nodeapp/AskBnB/
 cd /home/teamgamma/nodeapp/AskBnB/
-pm2 restart ecosystem.config.js
+npm start
 exit
