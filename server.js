@@ -1,8 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require('cors');
 // Import Routes
 const userRoutes = require('./routes/user');
+const bookingRoutes = require('./routes/booking');
 
 const server = express();
 dotenv.config();
@@ -25,10 +27,12 @@ mongoose.connect(
 
 // Middlewares
 server.use(express.json());
+server.use(cors());
 // server.use(express.urlencoded({ extended: true }));
 
 // Routes Middlewares
 server.use('/api/user', userRoutes);
+server.use('/api/booking', bookingRoutes);
 
 server.get('/', (req, res) => {
   res.send('Hello AskBnB');
