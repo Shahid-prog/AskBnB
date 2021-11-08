@@ -1,6 +1,6 @@
 pipeline {
      agent any    
-     // tools {nodejs "node"}
+     tools {nodejs "node"}
      stages {
        stage('Git') {
             steps {
@@ -9,7 +9,7 @@ pipeline {
           }
        stage("Build") {
             steps {
-                sh "npm install"
+                sh 'npm install'
             }
           }
         stage("Deploy") {
