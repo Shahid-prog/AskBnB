@@ -1,6 +1,3 @@
 #!/bin/sh
-cd
-cp -r /var/lib/jenkins/workspace/askbnb_test/* /home/teamgamma/nodeapp/AskBnB/
-cd /home/teamgamma/nodeapp/AskBnB/
-npm start
+ssh teamgamma@3.12.150.136
 exit
