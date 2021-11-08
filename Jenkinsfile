@@ -14,12 +14,9 @@ pipeline {
           }
         stage("Deploy") {
             steps {
-                 sshagent (credentials: ['	0742029f-4f63-469d-a87c-3be813192fbd']) {
+                 sshagent (credentials: ['0742029f-4f63-469d-a87c-3be813192fbd']) {
                     sh "ssh -T teamgamma@3.12.150.136"
                   }
-                //sh "chmod +x scripts/deploy"
-                //sh "./scripts/deploy"
-                 //sh 'ssh teamgamma@3.12.150.136:22'
             }
           }
     }
