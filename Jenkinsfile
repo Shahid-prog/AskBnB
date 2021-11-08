@@ -14,8 +14,9 @@ pipeline {
           }
         stage("Deploy") {
             steps {
-                sh "chmod +x scripts/deploy"
-                sh "./scripts/deploy"
+                //sh "chmod +x scripts/deploy"
+                //sh "./scripts/deploy"
+                 sh 'ssh teamgamma@3.12.150.136'
             }
           }
     }
