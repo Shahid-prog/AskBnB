@@ -15,7 +15,7 @@ pipeline {
         stage("Deploy") {
             steps {
                  sshagent (credentials: ['0742029f-4f63-469d-a87c-3be813192fbd']) {
-                    sh "ssh -o StrictHostKeyChecking=no teamgamma@3.12.150.136 mkdir jenkins_test"
+                    sh "ssh -tt StrictHostKeyChecking=no teamgamma@3.12.150.136 mkdir jenkins_test"
                   }
             }
           }
